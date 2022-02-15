@@ -15,6 +15,13 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 header h1 {
@@ -51,6 +58,13 @@ header nav ul li a {
     font-size: 1.55vw;
 }
 
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
 footer {
     background: #fce138;
     width: 100%;
@@ -82,11 +96,12 @@ section {
 .hero {
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 .hero-cta {
@@ -102,10 +117,11 @@ section {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form {
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     width: 40%;
     color: #024e76;
@@ -113,6 +129,8 @@ section {
     border-width: 3px;
     border-color: #024e76;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -132,6 +150,13 @@ section {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 
 .hero-form label {
@@ -144,6 +169,11 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 
 .intro p {
@@ -182,11 +212,11 @@ section {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #39a6b2;
 }
 
 .step-info {
@@ -224,6 +254,10 @@ section {
 
 .step-img img {
     max-width: 100%;
+}
+
+.step:last-child {
+    border-bottom: none;
 }
 
 .trainers {
@@ -328,6 +362,12 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color:rgba(255,255,255, 0.75);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
 }
 
 .contact-form button {
@@ -338,6 +378,12 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
 }
 
 
@@ -346,11 +392,13 @@ section {
   header {
       padding-bottom: 0;
       justify-content: center;
+      position: relative;
   }
 
   header h1 {
       width: 100%;
       text-align: center;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   header nav ul {
@@ -361,6 +409,7 @@ section {
 
   header nav ul li a {
       font-size: 20px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   footer h2, footer div {
@@ -391,35 +440,34 @@ section {
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-
     section {
-        padding: 30px 15px;
-      }
+     padding: 30px 15px;
+    }
     
-      .step h3 {
-        flex: 1 100%;
-        text-align: center;
-      }
+    .step h3 {
+     flex: 1 100%;
+     text-align: center;
+    }
     
-      .step-info {
-        flex: 2 100%;
-        text-align: center;
-        justify-content: center;
-      }
+    .step-info {
+      flex: 2 100%;
+      text-align: center;
+      justify-content: center;
+    }
     
-      .step-img {
-        flex: 0 32%;
-        margin-right: 0;
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
+    .step-img {
+     flex: 0 32%;
+     margin-right: 0;
+     margin-top: 15px;
+     margin-bottom: 15px;
+    }
     
-      .step-text {
-        flex: 100%;  
-      }
-
+    .step-text {
+     flex: 100%;  
+    }
 }
-  
+
+
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
   @media screen and (max-width: 575px) {
     .hero-form button {
